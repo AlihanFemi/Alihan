@@ -30,7 +30,6 @@ class TestInfiniteScroll(unittest.TestCase):
         time.sleep(3)
         after_scroll = len(driver.find_elements(By.CLASS_NAME, 'jscroll-added'))
         self.driver.save_full_page_screenshot('infinite-scroll-after.png')
-        print(f"{after_scroll} > {before_scroll}")
         self.assertTrue(after_scroll > before_scroll)
 
     
